@@ -6,8 +6,8 @@
   "description": "A clean, beautiful and responsive portfolio template for Developers!",
   "source": "src/index.html",
   "scripts": {
-    "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build",
+    "predeploy": "yarn run build ./*.html --public-url https://anasali.me",
+    "deploy": "gh-pages -d dist",
     "start": "parcel",
     "build": "parcel build"
   },
@@ -25,7 +25,8 @@
     "@parcel/transformer-sass": "^2.0.1",
     "gh-pages": "^4.0.0",
     "parcel": "^2.0.1",
-    "prettier": "^2.4.1"
+    "prettier": "^2.4.1",
+    "shx": "^0.3.4"
   },
   "dependencies": {
     "@popperjs/core": "^2.10.2",
